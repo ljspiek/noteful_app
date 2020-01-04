@@ -5,7 +5,7 @@ import FolderButton from '../folderButton/folderButton'
 function FolderList(props){
      
     const folderNames=props.files.folders;
-    console.log(folderNames); 
+    console.log("reached Folder"); 
     
     return ( 
       <div>

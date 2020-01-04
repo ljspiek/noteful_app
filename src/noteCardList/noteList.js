@@ -5,7 +5,8 @@ import NoteCardButton from '../noteCardButton/noteCardButton'
 
 function NoteList(props){
     const notes=props.files.notes;
-    console.log(notes)
+    console.log("reached Notes"); 
+    
    
     return (
       <section className="noteList"> 

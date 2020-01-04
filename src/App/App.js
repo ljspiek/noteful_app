@@ -1,5 +1,8 @@
 import React,{Component} from 'react';
+
 import {Route, Link} from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
+
 import data from '../dummy-store';
 import NotefullHome from '../notefullHome/notefullHome';
 import NoteList from '../noteCardList/noteList';
@@ -15,8 +18,9 @@ class App extends Component{
     notes: [],
     folders: [],
   }
-
-
+  
+  //methods 
+  componentDidMount(){console.log(this.props.match.params)}
 
   render(){
 
@@ -25,22 +29,25 @@ class App extends Component{
     
     //CREATE ROUTES
 
+    //updateNav(){}
+
+    //updateMain(){}
+    
+
    
     //MAIN RENDER
-    return ( <div>
-              <NotefullHome name="Noteful Home"/>
+    return ( 
+          <div>
+                <header><Link to={'/'}><NotefullHome name="Noteful Home"/></Link></header> 
+                <aside>
+                <FolderList className="folder-area" files={data} />
+                </aside>
                 <section className="grid-container">
-                  <FolderList className="folder-area" files={data} />
-                  <NoteList className="note-area"files={data}/>
+                <NoteList className="note-area"files={data}/>
                 </section>
              </div>)
 
-    // return (<div>
-    // {/* FOLDER NAVIGATION */}  
-    // {/* HEADER FOR NOTEFUL HOME  */}
-    // {/* MAIN CARDS */}
-    // </div>)
-  
+   
 
 }
 }
