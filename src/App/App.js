@@ -8,7 +8,8 @@ import NotefullHome from '../notefullHome/notefullHome';
 import NoteList from '../noteCardList/noteList';
 import FolderList from '../folderList/folderList';
 import '../App/App.css';
-
+import AddFolder from '../AddFolder/Add';
+import Addnote from '../AddNote/AddNote';
 // console.log(data);
 
 
@@ -20,7 +21,7 @@ class App extends Component{
   }
   
   //methods 
-  componentDidMount(){console.log(this.props.match.params)}
+  // componentDidMount(){console.log(this.props.match.params)}
 
   render(){
 
@@ -37,14 +38,17 @@ class App extends Component{
    
     //MAIN RENDER
     return ( 
+      
           <div>
-                <header><Link to={'/'}><NotefullHome name="Noteful Home"/></Link></header> 
+                {/* <AddFolder></AddFolder> */}
+                <Addnote></Addnote>
+                {/* <header><Link to={'/'}><NotefullHome name="Noteful Home"/></Link></header> 
                 <aside>
                 <FolderList className="folder-area" files={data} />
                 </aside>
                 <section className="grid-container">
                 <NoteList className="note-area"files={data}/>
-                </section>
+                </section> */}
              </div>)
 
    
